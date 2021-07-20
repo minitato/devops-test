@@ -22,10 +22,10 @@ jobs:
       run: cd test
     
     - name: Module
-      run: go mod init module/m
+      run: go mod init module/m && go mod tidy
             
     - name: Init
-      run: go init -v
+      run: go init
 
     - name: Test
       run: go test -v
