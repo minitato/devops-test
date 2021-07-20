@@ -20,15 +20,6 @@ jobs:
 
     - name: Bash
       run: cd test
-    
-    - name: Module
-      run: go mod init -v "https://github.com/minitato/devops-test"
-      
-    - name: M/T
-      run: go mod tidy
-      
-    - name: Init
-      run: go init -v
-
+          
     - name: Test
       run: go test -v
