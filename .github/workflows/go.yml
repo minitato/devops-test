@@ -18,7 +18,7 @@ jobs:
       with:
         go-version: 1.16
 
-    - name: Run
+    - name: Runtest
       run: pwd && ls -la
     
 #     - name: Module
