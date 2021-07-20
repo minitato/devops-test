@@ -25,4 +25,4 @@ jobs:
       run: go mod init module/m && go mod tidy
             
     - name: Test
-      run: go test -v
+      run: go test
