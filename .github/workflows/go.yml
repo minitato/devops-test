@@ -20,6 +20,12 @@ jobs:
 
     - name: Bash
       run: cd test
-          
+    
+    - name: Module
+      run: go mod init module/m
+            
+    - name: Init
+      run: go init -v
+
     - name: Test
       run: go test -v
