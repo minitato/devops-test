@@ -13,23 +13,23 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up Go
-      uses: actions/setup-go@v2
-      with:
-        go-version: 1.16
+    # - name: Set up Go
+    #   uses: actions/setup-go@v2
+    #   with:
+    #     go-version: 1.16
 
-    - name: Set Terraform
-      uses: hashicorp/setup-terraform@v1
+    # - name: Set Terraform
+    #   uses: hashicorp/setup-terraform@v1
 
-    - name: Configure AWS credentials from Test account
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: AKIAXCPW6SYCROTVMUHU
-        aws-secret-access-key: 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
-        aws-region: us-east-1
+    # - name: Configure AWS credentials from Test account
+    #   uses: aws-actions/configure-aws-credentials@v1
+    #   with:
+    #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    #     aws-region: us-east-1
 
     - name: Checkin app all configuration
-      run: go version && terraform version && aws --version
+      run: cat ${{ secrets.AWS_ACCESS_KEY_ID }} $$ cat ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     # - name: Bash
     #   run: cd test
