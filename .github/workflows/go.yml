@@ -1,0 +1,31 @@
+name: Go
+
+on:
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.16
+
+    - name: Module
+      run: go mod -v module/m
+      
+    - name: M/T
+      run: go mod tidy
+      
+    - name: Init
+      run: go init -v ./test
+
+    - name: Test
+      run: go test -v ./test
