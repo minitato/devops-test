@@ -28,8 +28,8 @@ jobs:
     #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     #     aws-region: us-east-1
 
-    - name: Checkin app all configuration
-      run: cat ${secrets.AWS_ACCESS_KEY_ID} $$ cat ${secrets.AWS_SECRET_ACCESS_KEY}
+    - name: Check app all configuration
+      run: env
 
     # - name: Bash
     #   run: cd test
