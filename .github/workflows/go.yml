@@ -18,14 +18,17 @@ jobs:
       with:
         go-version: 1.16
 
-    - name: Module
-      run: go mod init -v "https://github.com/minitato/devops-test"
-      
-    - name: M/T
-      run: go mod tidy
-      
-    - name: Init
-      run: go init -v ./test
-
     - name: Test
-      run: go test -v ./test
+      run: pwd && ls -la
+    
+#     - name: Module
+#       run: go mod init -v "https://github.com/minitato/devops-test"
+      
+#     - name: M/T
+#       run: go mod tidy
+      
+#     - name: Init
+#       run: go init -v ./test
+
+#     - name: Test
+#       run: go test -v ./test
