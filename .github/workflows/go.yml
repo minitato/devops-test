@@ -29,7 +29,7 @@ jobs:
     #     aws-region: us-east-1
 
     - name: Checkin app all configuration
-      run: cat ${{ secrets.AWS_ACCESS_KEY_ID }} $$ cat ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: cat ${secrets.AWS_ACCESS_KEY_ID} $$ cat ${secrets.AWS_SECRET_ACCESS_KEY}
 
     # - name: Bash
     #   run: cd test
