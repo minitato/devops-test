@@ -29,7 +29,7 @@ jobs:
       uses: hashicorp/setup-terraform@v1
 
     - name: Checkin app all configuration
-      run: go version && terraform version
+      run: go version && terraform version && unzip && curl
 
     # - name: Bash
     #   run: cd test
